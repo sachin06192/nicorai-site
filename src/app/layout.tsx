@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
+import MobileMenu from "@/components/MobileMenu";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "NicorAI | AI & Digital Transformation Solutions for Smarter Business",
@@ -35,7 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className="font-sans antialiased">
+        <Navbar />
+        <MobileMenu />
         {children}
+        <Footer />
         <script src="/assets/scripts/app.js" defer />
       </body>
     </html>
